@@ -7,7 +7,7 @@
 /**
  *  信息提示
  *  @param information 提示文字
- *  @param view        HUD展示的view
+ *  @param visew        HUD展示的view
  *  @param afterDelay  展示的时间
  */
 + (MBProgressHUD *)showInformation:(NSString *)information toView:(UIView *)view andAfterDelay:(float)afterDelay;

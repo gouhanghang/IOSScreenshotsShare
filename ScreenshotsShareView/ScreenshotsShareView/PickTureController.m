@@ -111,7 +111,7 @@
 
     // 保存图片到相册中
     UIImageWriteToSavedPhotosAlbum(img,self, @selector(image:didFinishSavingWithError:contextInfo:),nil);
-    
+//    ss
 }
 //保存图片完成之后的回调
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error
