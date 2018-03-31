@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>shenm</string>
+	<key>NSPhotoLibraryUsageDesciption</key>
+	<string>用来装逼</string>
+	<key>NSCameraUsageDescription</key>
+	<string>APP需要您的同意才能访问相机</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>APP需要您的同意才能访问相册</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
