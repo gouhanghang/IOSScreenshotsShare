@@ -8,6 +8,7 @@
 
 #import "ShareViewController.h"
 #import "ImageCell.h"
+#import "PickTureController.h"
 @interface ShareViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic,strong)UICollectionView *collection;
 @property(nonatomic,strong)NSArray *imagearr;
@@ -66,5 +67,12 @@
     return 10;
 }
 
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    PickTureController *vc=[PickTureController new];
+    vc.picturearr=_imagearr;
+    vc.indexpictrue=indexPath.row;
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+}
 @end
