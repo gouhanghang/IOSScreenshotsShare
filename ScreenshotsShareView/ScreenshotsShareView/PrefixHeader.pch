@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  ScreenshotsShareView
+//
+//  Created by 苟应航 on 2018/3/31.
+//  Copyright © 2018年 GouHang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "Masonry.h"
+#import "ShareView.h"
+#import "UIImageView+WebCache.h"
+#define  SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define  SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define  SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define WINDOWS [UIApplication sharedApplication].keyWindow
+#define SafeAreaTopHeight (SCREEN_HEIGHT == 812.0 ? 88 : 64)
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
