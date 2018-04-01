@@ -51,7 +51,9 @@
             make.height.mas_equalTo(100);
         }];
         UIButton *image=[UIButton buttonWithType:UIButtonTypeCustom];
+        image.tag=100+i;
         [image setImage:[UIImage imageNamed:imageicon[i]] forState:UIControlStateNormal];
+        [image addTarget:self action:@selector(shareaction:) forControlEvents:UIControlEventTouchUpInside];
         [imageview addSubview:image];
         [image mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.height.mas_equalTo(25);
@@ -60,7 +62,9 @@
         }];
         
         UIButton *titilelabe=[UIButton buttonWithType:UIButtonTypeCustom];
+        titilelabe.tag=100+i;
         [titilelabe setTitle:imagetitle[i] forState:UIControlStateNormal];
+        [image addTarget:self action:@selector(shareaction:) forControlEvents:UIControlEventTouchUpInside];
         [titilelabe setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         titilelabe.titleLabel.font=[UIFont systemFontOfSize:14];
         [imageview addSubview:titilelabe];
@@ -86,7 +90,17 @@
     [self removeFromSuperview];
     
 }
-
+-(void)shareaction:(UIButton *)sender{
+    if (sender.tag==100) { //朋友圈
+        [MBProgressHUD showInformationCenter:@"我点击了朋友圈" toView:self andAfterDelay:2.0];
+    }else if (sender.tag==101) {//QQ
+        [MBProgressHUD showInformationCenter:@"我点击了QQ" toView:self andAfterDelay:2.0];
+    }else{//微信
+        [MBProgressHUD showInformationCenter:@"我点击了微信" toView:self andAfterDelay:2.0];
+    }
+    
+    
+}
 - (void)animationWithView:(UIView *)view duration:(CFTimeInterval)duration{
     
     CAKeyframeAnimation * animation;

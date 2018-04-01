@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ShareViewDelegate <NSObject>
+
+-(void)shareAction:(NSInteger)tag;
+
+@end
+
+
+
 @interface ShareView : UIView
+@property(nonatomic,assign) id<ShareViewDelegate> delegate;
 -(instancetype)initWithFrame:(CGRect)frame image:(UIImage *)images;
 @end
